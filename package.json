@@ -5,7 +5,12 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "latest",
+    "@mui/material": "latest",
+    "@mui/styled-engine-sc": "latest",
+    "styled-components": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
