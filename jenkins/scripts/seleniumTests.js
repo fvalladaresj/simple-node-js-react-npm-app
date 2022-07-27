@@ -2,7 +2,7 @@ const {Builder} = require('selenium-webdriver');
 const assert = require('assert');
 const chrome = require('selenium-webdriver/chrome');
 
-const service = new chrome.ServiceBuilder('chromedriver');
+const service = new chrome.ServiceBuilder('/jenkins/scripts/driver');
 
 (async function firstScript() {
   try {
