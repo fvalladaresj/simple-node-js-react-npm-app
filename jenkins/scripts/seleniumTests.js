@@ -8,20 +8,15 @@ const service = new chrome.ServiceBuilder('jenkins/scripts/driver/chromedriver.e
   try {
     let driver = await new Builder().forBrowser('chrome').setChromeService(service).build();
 
-    await driver.get('https://www.google.com');
+    await driver.get('http://localhost:3000/');
 
-    await driver.getTitle();
+    let addContactBtn = await driver.findElement(By.id('addContactBtn'));
+    await addContactBtn.click();
 
-    await driver.manage().setTimeouts({implicit: 1000})
+    let nameInput = await driver.findElement(By.name('name'));
+    await nameInput.sendKeys('Juan');
 
-    let searchBox = await driver.findElement(By.name('q'));
-    let searchButton = await driver.findElement(By.name('btnK'));
-
-    await searchBox.sendKeys('Selenium');
-    await searchButton.click();
-
-    let value = await searchBox.getAttribute("value");
-    assert.deepStrictEqual(value, "Selenium")
+    assert.deepStrictEqual(nameInput, "Juan");
 
     await driver.quit();
   } catch (error) {
