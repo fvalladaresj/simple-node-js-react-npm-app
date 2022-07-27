@@ -74,6 +74,7 @@ const Item = styled(Grid)(({ theme }) => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   textAlign: "left",
+  fontSize: 28,
 }));
 
 const App = () => {
@@ -319,7 +320,7 @@ const App = () => {
           <Grid item xs={8}>
             <Item>
               <Title>
-                <Typography variant="h4">Lista de Contactos</Typography>
+                Lista de Contactos
               </Title>
             </Item>
           </Grid>
