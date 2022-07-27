@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
 import {
   Box,
   Button,
@@ -28,6 +27,7 @@ import {
   TableBody,
   Table,
   Typography,
+  styled,
 } from "@mui/material";
 import {
   KeyboardArrowRight,
