@@ -10,6 +10,8 @@ const service = new chrome.ServiceBuilder('jenkins/scripts/driver/chromedriver.e
 
     await driver.get('http://localhost:3000/');
 
+    await driver.manage().setTimeouts({implicit: 10000})
+
     let addContactBtn = await driver.findElement(By.id('addContactBtn'));
     await addContactBtn.click();
 
