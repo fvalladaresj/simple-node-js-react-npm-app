@@ -1,9 +1,12 @@
-const {Builder, By} = require('selenium-webdriver');
+const {Builder} = require('selenium-webdriver');
 const assert = require('assert');
+const chrome = require('selenium-webdriver/chrome');
+
+const service = new chrome.ServiceBuilder('chromedriver');
 
 (async function firstScript() {
   try {
-    let driver = await new Builder().forBrowser('chrome').build();
+    let driver = await new Builder().forBrowser('chrome').setChromeService(service).build();
 
     await driver.get('https://www.google.com');
 
