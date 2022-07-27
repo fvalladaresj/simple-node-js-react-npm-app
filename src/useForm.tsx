@@ -20,7 +20,7 @@ const useForm = ({ initState, callback, validator }: any) => {
   const [isSubmited, setIsSubmited] = useState(false);
 
   useEffect(() => {
-    console.log(Object.values(errors))
+    // console.log(Object.values(errors))
     let aux = Object.values(errors).filter(error => typeof error !== "undefined");
     const isValidErrors = () =>
     aux.filter(error => error !== "")
